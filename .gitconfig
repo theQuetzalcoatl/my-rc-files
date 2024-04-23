@@ -1,0 +1,7 @@
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
+[user]
+	name = theQuetzalcoatl
+	email = danielgerendai@gmail.com
