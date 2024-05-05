@@ -1,8 +1,10 @@
 " View options by :options"
 " Docs on particular option :help <option name>"
+" :help key-noation "
 
-"imap jj <Esc> " maps the string jj to function as the escape button"
-inoremap jj <Esc> " maps the string jj to function as the escape button"
+inoremap jk <Esc> " maps the string jj to function as the escape button"
+noremap <A-Left> <C-O> 
+noremap <A-Right> <C-I>
 
 set number relativenumber
 set mouse=a
@@ -26,5 +28,6 @@ set laststatus=2 " status bar at the bottom"
 set clipboard=unnamedplus " makes it so that 'y' command copies to the default clipboard as well"
 
 set splitbelow " split all windows, including terminal below"
+
 " remaps 'S' to expand to global replace"
 nnoremap S :%s///g<Left><Left><Left>
