@@ -4,6 +4,7 @@
 
 set nocompatible
 syntax on
+set path+=**
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -29,12 +30,17 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
+" Alt char is treated as an Escape sequence, and the terminal emulator send 'Esc' insted of Alt for historical reasons "
+nnoremap <Esc>a :tabp<CR> 
+inoremap <Esc>a <Esc>:tabp<CR>i
+nnoremap <Esc>d :tabn<CR>
+inoremap <Esc>d <Esc>:tabn<CR>i
 
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " highlights cursor line"
-colorscheme torte
-highlight Cursorline cterm=bold ctermbg=black
+colorscheme nordic-aurora
+highlight Cursorline term=NONE cterm=bold ctermbg=8
 " set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
@@ -42,56 +48,63 @@ set noshowmatch
 
 " --- STATUS LINE --- "
 " help: statusline
+" current settings for a highlight group -> :highlight <group>
 set laststatus=2 " status bar at the bottom"
-highlight StatusLineModeNormal   ctermfg=white ctermbg=brown     cterm=bold
-highlight StatusLineModeInsert   ctermfg=white ctermbg=darkblue  cterm=bold
-highlight StatusLineModeReplace  ctermfg=white ctermbg=red       cterm=bold
-highlight StatusLineModeVisual   ctermfg=white ctermbg=darkgreen cterm=bold
-highlight StatusLineModeCommand  ctermfg=white ctermbg=yellow    cterm=bold
-highlight StatusLineModeSelect   ctermfg=white ctermbg=cyan      cterm=bold
-highlight StatusLineModeTerminal ctermfg=white ctermbg=black     cterm=bold
-highlight StatusLineModeUnknown  ctermfg=white ctermbg=grey      cterm=bold
+if has("termguicolors")
+    set termguicolors
+endif
 
-function Moode()
+highlight StatusLineModeNormal   guibg=#ffa800 guifg=#151B1E cterm=bold
+highlight StatusLineModeInsert   guibg=#2e87d1 guifg=#151B1E cterm=bold
+highlight StatusLineModeReplace  guibg=#dff708 guifg=#151B1E cterm=bold
+highlight StatusLineModeVisual   guibg=#2a7a53 guifg=#151B1E cterm=bold
+highlight StatusLineModeCommand  guibg=#6c01ff guifg=#151B1E cterm=bold
+highlight StatusLineModeTerminal guibg=#bb002d guifg=#151B1E cterm=bold
+highlight StatusLineModeUnknown  guibg=#000000 guifg=#151B1E cterm=bold
+
+highlight StatusLineFileNormal   guibg=#000000 guifg=#ffa800 cterm=bold
+highlight StatusLineFileInsert   guibg=#000000 guifg=#2e87d1 cterm=bold
+highlight StatusLineFileReplace  guibg=#000000 guifg=#dff708 cterm=bold
+highlight StatusLineFileVisual   guibg=#000000 guifg=#2a7a53 cterm=bold
+highlight StatusLineFileCommand  guibg=#000000 guifg=#6c01ff cterm=bold
+highlight StatusLineFileTerminal guibg=#000000 guifg=#bb002d cterm=bold
+highlight StatusLineFileUnknown  guibg=#000000  cterm=bold
+
+function Mode_File()
 	let l:mode = mode()
 	if l:mode == 'n'
-		return '%#StatusLineModeNormal# NORMAL %#StatusLine#'
+		return '%#StatusLineModeNormal# NORMAL %#StatusLineFileNormal# %t'
 	elseif l:mode == 'i'
-		return '%#StatusLineModeInsert# INSERT %#StatusLine#'
+		return '%#StatusLineModeInsert# INSERT %#StatusLineFileInsert# %t'
 	elseif l:mode == 'R'
-		return '%#StatusLineModeReplace# REPLACE %#StatusLine#'
+		return '%#StatusLineModeReplace# REPLACE %#StatusLineFileReplace# %t'
 	elseif l:mode == 'v'
-		return '%#StatusLineModeVisual# VISUAL %#StatusLine#'
+		return '%#StatusLineModeVisual# VISUAL %#StatusLineFileVisual# %t'
 	elseif l:mode == 'V'
-		return '%#StatusLineModeVisual# V-LINE %#StatusLine#'
+		return '%#StatusLineModeVisual# V-LINE %#StatusLineFileVisual# %t'
 	elseif l:mode == '^V'
-		return '%#StatusLineModeVisual# V-BLOCK %#StatusLine#'
+		return '%#StatusLineModeVisual# V-BLOCK %#StatusLineFileVisual# %t'
 	elseif l:mode == 'c'
-		return '%#StatusLineModeCommand# COMMAND %#StatusLine#'
-	elseif l:mode == 's'
-		return '%#StatusLineModeSelect# SELECT %#StatusLine#'
-	elseif l:mode == 'S'
-		return '%#StatusLineModeSelect# S-LINE %#StatusLine#'
-	elseif l:mode == '^S'
-		return '%#StatusLineModeSelect# S-BLOCK %#StatusLine#'
+		return '%#StatusLineModeCommand# COMMAND %#StatusLineFileCommand# %t'
 	elseif l:mode == 't'
-		return '%#StatusLineModeTerminal# TERMINAL %#StatusLine#'
+		return '%#StatusLineModeTerminal# TERMINAL %#StatusLineFileUnknown# %t'
 	else
-		return '%#StatusLineModeUnknown# UNKNOWN %#StatusLine#'
-	endif
+		return '%#StatusLineModeUnknown# UNKNOWN %#StatusLine#' " %#StatusLine#' restores the original colors
 endfunction
 
-set statusline=%{%Moode()%}\ %t\ %m%r%=%l/%L:%v\ %p%%\ 
+set statusline=%{%Mode_File()%}\ %m%r%=(%v,%l/%L)\ \ %p%%\ 
+" TODO: change cursorline BG color according to mode "
+
 
 " --- OTHER --- "
-
 set noerrorbells
 set nobackup
 
 set autoindent
+set tabstop =2 " tabs in space"
+set shiftwidth=2 " V mode indents 2 spaces "
 " jumps to the current search result when typing "
 set incsearch 
-set tabstop =2 " tabs in space"
 set wildmode=list:full " list all matches for tabs "
 set clipboard=unnamedplus " makes it so that 'y' command copies to the default clipboard as well"
 set splitbelow " split all windows, including terminal below"
