@@ -39,7 +39,8 @@ inoremap <Esc>d <Esc>:tabn<CR>i
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " highlights cursor line"
-colorscheme nordic-aurora
+colorscheme nordic-aurora " dark_plus   plastic
+   
 highlight Cursorline term=NONE cterm=bold ctermbg=8
 " set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
@@ -103,6 +104,7 @@ set nobackup
 set autoindent
 set tabstop =2 " tabs in space"
 set shiftwidth=2 " V mode indents 2 spaces "
+set expandtab " use spaces for tabs "
 " jumps to the current search result when typing "
 set incsearch 
 set wildmode=list:full " list all matches for tabs "
