@@ -17,6 +17,7 @@ let mapleader=" "
 " remaps: :[n,i,v]map
 
 inoremap jk <Esc> " maps the string jj to function as the escape button"
+inoremap JK <Esc>
 nnoremap <A-Left> <C-O> 
 nnoremap <A-Right> <C-I>
 " dti<space> can be used to 'dw' (except for line endings) "
@@ -30,11 +31,15 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
-" Alt char is treated as an Escape sequence, and the terminal emulator send 'Esc' insted of Alt for historical reasons "
-nnoremap <Esc>a :tabp<CR> 
-inoremap <Esc>a <Esc>:tabp<CR>i
-nnoremap <Esc>d :tabn<CR>
-inoremap <Esc>d <Esc>:tabn<CR>i
+nnoremap <silent> <Esc>a :tabp<cr> 
+inoremap <silent> <Esc>a <Esc>:tabp<cr>i
+nnoremap <silent> <Esc>d :tabn<cr>
+inoremap <silent> <Esc>d <Esc>:tabn<cr>i
+" window resizeing i'silent' supresses command line output "
+nnoremap <silent> <Space><Up>    :resize -4<cr>
+nnoremap <silent> <Space><Down>  :resize +4<cr>
+nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
+nnoremap <silent> <Space><Right> :vertical resize +4<cr>
 
 " --- VISIBLES --- "
 set number relativenumber
@@ -88,7 +93,7 @@ function Mode_File()
 	elseif l:mode == 'c'
 		return '%#StatusLineModeCommand# COMMAND %#StatusLineFileCommand# %t'
 	elseif l:mode == 't'
-		return '%#StatusLineModeTerminal# TERMINAL %#StatusLineFileUnknown# %t'
+		return '%#StatusLineModeTerminal# TERMINAL %#StatusLineFileTerminal# %t'
 	else
 		return '%#StatusLineModeUnknown# UNKNOWN %#StatusLine#' " %#StatusLine#' restores the original colors
 endfunction
