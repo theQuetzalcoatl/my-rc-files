@@ -24,7 +24,7 @@ nnoremap <A-Right> <C-I>
 nnoremap dw diw
 nnoremap cw ciw
 nnoremap S :%s///g<Left><Left><Left>
-nnoremap <leader>n :nohlsearch<CR>
+nnoremap <silent> <silent> <leader>n :nohlsearch<CR>
 " nnoremap <SPACE> : ???? "
 " nnoremap B :!./build.sh<CR>  ??? "
 nnoremap <c-l> <c-w>l
