@@ -63,19 +63,19 @@ highlight LightBlue ctermfg=6 guifg=#9cdcfe cterm=NONE gui=NONE
 highlight BrightBlue ctermfg=4 guifg=#007acc cterm=NONE gui=NONE
 highlight Magenta ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
 highlight Violet ctermfg=13 guifg=#646695 cterm=NONE gui=NONE
-highlight Comment ctermfg=0 guifg=#505050 cterm=italic gui=italic
-highlight DocString ctermfg=2 guifg=#608b4e cterm=italic gui=italic
-highlight SpecialComment ctermfg=2 guifg=#608b4e cterm=italic gui=italic
+highlight Comment ctermfg=0 guifg=#505050 
+highlight DocString ctermfg=2 guifg=#608b4e 
+highlight SpecialComment ctermfg=2 guifg=#608b4e 
 highlight PlainText ctermfg=7 guifg=#d4d4d4 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight Control ctermfg=13 guifg=#c586c0 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
-highlight Escape ctermfg=3 guifg=#d7ba7d cterm=italic gui=italic
+highlight Escape ctermfg=3 guifg=#d7ba7d 
 highlight Function ctermfg=3 guifg=#dcdcaa cterm=NONE gui=NONE
 highlight Number ctermfg=9 guifg=#b5cea8 cterm=NONE gui=NONE
 highlight Operator ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
 highlight RegEx ctermfg=1 guifg=#d16969 cterm=NONE gui=NONE
 highlight String ctermfg=3 guifg=#ce9178 cterm=NONE gui=NONE
 highlight Storage ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
-highlight Language ctermfg=4 guifg=#569cd6 cterm=italic gui=italic
+highlight Language ctermfg=4 guifg=#569cd6 
 highlight Type ctermfg=6 guifg=#4ec9b0 cterm=NONE gui=NONE
 highlight Var ctermfg=6 guifg=#9cdcfe cterm=NONE gui=NONE
 highlight Tags ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
@@ -90,7 +90,7 @@ highlight vCursor ctermbg=13 guibg=#c586c0 cterm=NONE gui=NONE
 highlight rCursor ctermbg=1 guibg=#d16969 cterm=NONE gui=NONE
 highlight Cursor ctermbg=2 guibg=#608b4e cterm=NONE gui=NONE
 highlight TermCursor ctermbg=2 guibg=#608b4e cterm=NONE gui=NONE
-highlight CursorLine ctermbg=0 guibg=#1e1e1e cterm=NONE gui=NONE
+highlight CursorLine ctermbg=0 guibg=#2a2f3a cterm=NONE gui=NONE
 highlight Directory ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight DiffAdd ctermbg=2 guibg=#608b4e cterm=NONE gui=NONE
 highlight diffAdded ctermbg=2 guibg=#608b4e cterm=NONE gui=NONE
@@ -122,8 +122,8 @@ highlight SpellBad ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gu
 highlight SpellCap ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight SpellRare ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight SpellLocal ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
-highlight TabLine ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#303030 cterm=italic gui=italic
-highlight TabLineFill ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#1e1e1e cterm=italic gui=italic
+highlight TabLine ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#303030 
+highlight TabLineFill ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#1e1e1e 
 highlight TabLineSel ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#1e1e1e cterm=NONE gui=NONE
 highlight Title ctermfg=13 guifg=#c586c0 cterm=bold gui=bold
 highlight Visual ctermbg=0 guibg=#1e1e1e cterm=reverse gui=reverse
@@ -142,8 +142,8 @@ highlight qfFileName ctermfg=4 guifg=#569cd6 ctermbg=NONE guibg=NONE cterm=NONE 
 highlight qfLineNr ctermfg=9 guifg=#b5cea8 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight helpHyperTextEntry ctermfg=6 guifg=#9cdcfe cterm=NONE gui=NONE
 highlight helpHyperTextJump ctermfg=6 guifg=#9cdcfe cterm=NONE gui=NONE
-highlight helpCommand ctermfg=3 guifg=#ce9178 cterm=italic gui=italic
-highlight helpExample ctermfg=3 guifg=#ce9178 cterm=italic gui=italic
+highlight helpCommand ctermfg=3 guifg=#ce9178 
+highlight helpExample ctermfg=3 guifg=#ce9178 
 highlight Statement ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight Constant ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight PreProc ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
@@ -165,7 +165,7 @@ highlight Label ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
 highlight Repeat ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
 highlight Typedef ctermfg=6 guifg=#4ec9b0 cterm=NONE gui=NONE
 highlight Delimiter ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
-highlight Special ctermfg=7 guifg=#d4d4d4 cterm=italic gui=italic
+highlight Special ctermfg=7 guifg=#d4d4d4 
 highlight SpecialChar ctermfg=13 guifg=#646695 cterm=NONE gui=NONE
 highlight link awkFieldVars Var
 highlight link awkVariables Var
@@ -177,7 +177,7 @@ highlight link awkExpression Operator
 highlight link awkBoolLogic Operator
 highlight link awkSemicolon Operator
 highlight link awkSpecialCharacter Character
-highlight cType ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
+highlight cType ctermfg=6 guifg=#4ec9b0 
 highlight link cConstant Constant
 highlight link cFormat Constant
 highlight link cInclude Constant
@@ -185,7 +185,7 @@ highlight link cStatement Conditional
 highlight link cIncluded Identifier
 highlight link cSpecial Character
 highlight link cSpecialCharacter Escape
-highlight csType ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
+highlight csType ctermfg=6 guifg=#4ec9b0 
 highlight link csThis Language
 highlight link csNew Constant
 highlight link csInterpolation Identifier
@@ -257,8 +257,8 @@ highlight link gitcommitWarning WarningMsg
 highlight link gitcommitSelectedFile Directory
 highlight link gitconfigNone PlainText
 highlight link gitconfigEscape Escape
-highlight goStandardLib ctermfg=7 guifg=#d4d4d4 cterm=italic gui=italic
-highlight goPackageName ctermfg=7 guifg=#d4d4d4 cterm=italic gui=italic
+highlight goStandardLib ctermfg=7 guifg=#d4d4d4 
+highlight goPackageName ctermfg=7 guifg=#d4d4d4 
 highlight goReceiver ctermfg=7 guifg=#d4d4d4 cterm=NONE gui=NONE
 highlight link goComment SpecialComment
 highlight link goTmplComment Comment
@@ -276,11 +276,11 @@ highlight link goFloats Type
 highlight link goArgumentType Type
 highlight link goTypeName Type
 highlight link goReceiverType Type
-highlight goType ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
-highlight goFloats ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
-highlight goSignedInts ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
-highlight goUnsignedInts ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
-highlight goComplexes ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
+highlight goType ctermfg=6 guifg=#4ec9b0 
+highlight goFloats ctermfg=6 guifg=#4ec9b0 
+highlight goSignedInts ctermfg=6 guifg=#4ec9b0 
+highlight goUnsignedInts ctermfg=6 guifg=#4ec9b0 
+highlight goComplexes ctermfg=6 guifg=#4ec9b0 
 highlight link goBoolean Boolean
 highlight link goPredefinedIdentifiers Constant
 highlight link goConst Constant
@@ -296,7 +296,7 @@ highlight link goMethodCall Function
 highlight link goBuiltins Function
 highlight link goFormatSpecifier Constant
 highlight link goEscapeC Escape
-highlight goEscapeU ctermfg=3 guifg=#d7ba7d cterm=italic gui=italic
+highlight goEscapeU ctermfg=3 guifg=#d7ba7d 
 highlight htmlHead ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
 highlight htmlTitle ctermfg=7 guifg=#d4d4d4 cterm=NONE gui=NONE
 highlight htmlTag ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
@@ -304,7 +304,7 @@ highlight htmlEndTag ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
 highlight htmlTagName ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight htmlSpecialTagName ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight htmlBold ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
-highlight htmlItalic ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
+highlight htmlItalic ctermfg=6 guifg=#4ec9b0 
 highlight link htmlH1 PlainText
 highlight link htmlH2 PlainText
 highlight link htmlH3 PlainText
@@ -428,7 +428,7 @@ highlight link markdownH5 markdownH1
 highlight link markdownH6 markdownH1
 highlight link markdownRule markdownH1
 highlight markdownHeadingDelimiter ctermfg=13 guifg=#c586c0 cterm=NONE gui=NONE
-highlight markdownItalic ctermfg=6 guifg=#9cdcfe cterm=italic gui=italic
+highlight markdownItalic ctermfg=6 guifg=#9cdcfe 
 highlight markdownItalicDelimiter ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
 highlight markdownBold ctermfg=4 guifg=#569cd6 cterm=bold gui=bold
 highlight markdownBoldDelimiter ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
@@ -477,7 +477,7 @@ highlight link ps1Interpolation Identifier
 highlight pythonRun ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight pythonCoding ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight pythonBuiltinFunc ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
-highlight pythonClassVar ctermfg=4 guifg=#569cd6 cterm=italic gui=italic
+highlight pythonClassVar ctermfg=4 guifg=#569cd6 
 highlight pythonAttribute ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight link pythonBuiltin Constant
 highlight link pythonDot Identifier
@@ -520,7 +520,7 @@ highlight link rubySymbol Character
 highlight link rubyClassNameTag Type
 highlight link rubyString String
 highlight link rubyStringDelimiter String
-highlight rustSelf ctermfg=4 guifg=#569cd6 cterm=italic gui=italic
+highlight rustSelf ctermfg=4 guifg=#569cd6 
 highlight link rustEscape Character
 highlight link rustPunctuation Comment
 highlight link rustDot Conditional
@@ -582,7 +582,7 @@ highlight link zshOption Identifier
 highlight link zshSubstDelim Boolean
 highlight link zshOperator Control
 highlight link zshQuoted Escape
-highlight zshPrecommand ctermfg=3 guifg=#dcdcaa cterm=italic gui=italic
+highlight zshPrecommand ctermfg=3 guifg=#dcdcaa 
 highlight zshParentheses ctermfg=7 guifg=#d4d4d4 cterm=NONE gui=NONE
 highlight todoItem ctermfg=7 guifg=#d4d4d4 cterm=NONE gui=NONE
 highlight todoID ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
@@ -599,7 +599,7 @@ highlight todoPriorityC ctermfg=3 guifg=#ce9178 cterm=NONE gui=NONE
 highlight todoPriorityD ctermfg=3 guifg=#d7ba7d cterm=NONE gui=NONE
 highlight todoPriorityE ctermfg=3 guifg=#dcdcaa cterm=NONE gui=NONE
 highlight todoPriorityF ctermfg=9 guifg=#b5cea8 cterm=NONE gui=NONE
-highlight todoComment ctermfg=0 guifg=#505050 cterm=italic gui=italic
+highlight todoComment ctermfg=0 guifg=#505050 
 highlight link CSVComment Comment
 highlight CSVColumnEven ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight CSVColumnOdd ctermfg=2 guifg=#608b4e cterm=NONE gui=NONE
@@ -611,7 +611,7 @@ highlight link vimNamespace Type
 highlight link vimCVar Type
 highlight link vimVarNamespace Type
 highlight link vimVar Identifier
-highlight vimEnvVar ctermfg=6 guifg=#9cdcfe cterm=italic gui=italic
+highlight vimEnvVar ctermfg=6 guifg=#9cdcfe 
 highlight link vimBuiltin Type
 highlight link vimFunc Function
 highlight link vimUserFunc Function
@@ -620,7 +620,7 @@ highlight link vimDocBlock SpecialComment
 highlight link vimFunction Function
 highlight vimFunctionError ctermfg=1 guifg=#f44747 cterm=NONE gui=NONE
 highlight vimContinue ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
-highlight vimLineComment ctermfg=0 guifg=#505050 cterm=italic gui=italic
+highlight vimLineComment ctermfg=0 guifg=#505050 
 highlight link vimCommentTitle SpecialComment
 highlight vimBracket ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
 highlight link vimNotFunc Conditional
@@ -823,7 +823,7 @@ highlight FilerCompletion ctermfg=0 guifg=#505050 cterm=NONE gui=NONE
 highlight vimfilerStatus cterm=NONE gui=NONE
 highlight vimfilerColumn__devicons ctermfg=7 guifg=#808080 cterm=NONE gui=NONE
 highlight vimfilerDirectory ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
-highlight vimfilerCurrentDirectory ctermfg=6 guifg=#4ec9b0 cterm=italic gui=italic
+highlight vimfilerCurrentDirectory ctermfg=6 guifg=#4ec9b0 
 highlight vimfilerMask ctermfg=4 guifg=#569cd6 cterm=NONE gui=NONE
 highlight vimfilerMark ctermfg=2 guifg=#608b4e cterm=NONE gui=NONE
 highlight vimfilerNonMark ctermfg=7 guifg=#d4d4d4 cterm=NONE gui=NONE
