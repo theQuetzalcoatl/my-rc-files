@@ -122,8 +122,8 @@ highlight SpellBad ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gu
 highlight SpellCap ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight SpellRare ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 highlight SpellLocal ctermfg=1 guifg=#d16969 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
-highlight TabLine ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#303030 
-highlight TabLineFill ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#1e1e1e 
+highlight TabLine guisp=NONE guifg=#384542 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+highlight TabLineFill ctermfg=7 guifg=#1e1e1e ctermbg=0 guibg=#1e1e1e 
 highlight TabLineSel ctermfg=7 guifg=#d4d4d4 ctermbg=0 guibg=#1e1e1e cterm=NONE gui=NONE
 highlight Title ctermfg=13 guifg=#c586c0 cterm=bold gui=bold
 highlight Visual ctermbg=0 guibg=#1e1e1e cterm=reverse gui=reverse
