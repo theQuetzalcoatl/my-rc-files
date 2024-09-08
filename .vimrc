@@ -24,7 +24,7 @@ nnoremap <A-Right> <C-I>
 nnoremap dw diw
 nnoremap cw ciw
 nnoremap S :%s///g<Left><Left><Left>
-nnoremap <silent> <silent> <leader>n :nohlsearch<CR>
+nnoremap  <silent> <leader>n :nohlsearch<cr>
 " nnoremap <SPACE> : ???? "
 " nnoremap B :!./build.sh<CR>  ??? "
 nnoremap <c-l> <c-w>l
@@ -40,11 +40,13 @@ nnoremap <silent> <Space><Up>    :resize -4<cr>
 nnoremap <silent> <Space><Down>  :resize +4<cr>
 nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
 nnoremap <silent> <Space><Right> :vertical resize +4<cr>
+nnoremap <leader>e :Explore<cr>
+nnoremap <leader>f :find<Space>
 
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " highlights cursor line"
-colorscheme nordic-aurora " dark_plus   plastic
+colorscheme nordic-aurora " dark_plus plastic
    
 highlight Cursorline term=NONE cterm=bold ctermbg=8
 " set hlsearch " highlight search pattern"
@@ -121,8 +123,5 @@ set grepprg=git\ grep\ -n "change grep command to this "
 set mouse=a
 set redrawtime=10000
 
-" save folding information to a file
-" autocmd BufWinLeave * mkview
-" autocmd BufWinEnter * silent! loadview
-
+" iabbrev <something> "
 
