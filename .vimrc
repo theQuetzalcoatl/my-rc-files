@@ -40,7 +40,6 @@ nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
 nnoremap <silent> <Space><Right> :vertical resize +4<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>v :Vexplore<cr>
-nnoremap <silent> <leader>v :Vexplore<cr>
 nnoremap <silent> <leader>w :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
 " move highlighted blocks of code up and down + indent accordingly 
