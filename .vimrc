@@ -33,6 +33,8 @@ nnoremap <silent> <Esc>a :tabp<cr>
 inoremap <silent> <Esc>a <Esc>:tabp<cr>i
 nnoremap <silent> <Esc>d :tabn<cr>
 inoremap <silent> <Esc>d <Esc>:tabn<cr>i
+" It1s a remap which i dont use
+nnoremap , :
 " window resizeing i'silent' supresses command line output "
 nnoremap <silent> <Space><Up>    :resize -4<cr>
 nnoremap <silent> <Space><Down>  :resize +4<cr>
@@ -40,7 +42,8 @@ nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
 nnoremap <silent> <Space><Right> :vertical resize +4<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>v :Vexplore<cr>
-nnoremap <silent> <leader>w :Lexplore<cr> :vertical resize 30<cr>
+nnoremap <silent> <leader>t :Texplore<cr>
+nnoremap <silent> <leader>l :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
 " move highlighted blocks of code up and down + indent accordingly 
 vnoremap <silent> <A-Down> :m '>+1<cr>gv=gv
