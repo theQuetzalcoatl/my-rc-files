@@ -25,8 +25,6 @@ nnoremap dw diw
 nnoremap cw ciw
 nnoremap S :%s///g<Left><Left><Left>
 nnoremap  <silent> <leader>n :nohlsearch<cr>
-" nnoremap <SPACE> : ???? "
-" nnoremap B :!./build.sh<CR>  ??? "
 nnoremap <c-l> <c-w>l
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
@@ -40,8 +38,21 @@ nnoremap <silent> <Space><Up>    :resize -4<cr>
 nnoremap <silent> <Space><Down>  :resize +4<cr>
 nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
 nnoremap <silent> <Space><Right> :vertical resize +4<cr>
-nnoremap <leader>e :Explore<cr>
+nnoremap <silent> <leader>e :Explore<cr>
+nnoremap <silent> <leader>v :Vexplore<cr>
+nnoremap <silent> <leader>v :Vexplore<cr>
+nnoremap <silent> <leader>w :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
+" move highlighted blocks of code up and down + indent accordingly 
+vnoremap <silent> <A-Down> :m '>+1<cr>gv=gv
+vnoremap <silent> <A-Up> :m '<-2<cr>gv=gv
+nnoremap <silent> <A-Up> :m .-2<cr>==
+nnoremap <silent> <A-Down> :m .+1<cr>==
+
+" --- NETRW --- "
+" Set Netrw to open in tree view by default
+let g:netrw_liststyle = 3
+
 
 " --- VISIBLES --- "
 set number relativenumber
@@ -107,6 +118,7 @@ set statusline=%{%Mode_File()%}\ %m%r%=(%v,%l/%L)\ \ %p%%\
 " --- OTHER --- "
 set noerrorbells
 set nobackup
+set noswapfile
 
 set autoindent
 set tabstop =2 " tabs in space"
