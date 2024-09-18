@@ -33,7 +33,7 @@ nnoremap <silent> <Esc>a :tabp<cr>
 inoremap <silent> <Esc>a <Esc>:tabp<cr>i
 nnoremap <silent> <Esc>d :tabn<cr>
 inoremap <silent> <Esc>d <Esc>:tabn<cr>i
-" It1s a remap which i dont use
+" It's a remap which i dont use
 nnoremap , :
 " window resizeing i'silent' supresses command line output "
 nnoremap <silent> <Space><Up>    :resize -4<cr>
@@ -61,7 +61,6 @@ set number relativenumber
 set cursorline " highlights cursor line"
 colorscheme nordic-aurora " dark_plus plastic
    
-highlight Cursorline term=NONE cterm=bold ctermbg=8
 " set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "

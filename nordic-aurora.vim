@@ -43,7 +43,7 @@ hi Cursor           guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 
 hi lCursor          guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi CursorIM         guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi CursorColumn     guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi CursorLine       guisp=NONE guifg=NONE   guibg=#2a2f3a ctermfg=231 ctermbg=234 gui=bold cterm=bold
+hi CursorLine       guisp=NONE guifg=NONE   guibg=#1a1f2a ctermfg=231 ctermbg=234 gui=bold cterm=bold
 hi Directory        guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi DiffAdd          guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi DiffChange       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -80,9 +80,9 @@ hi StatusLine       guisp=NONE guifg=#384545 guibg=#000000 ctermfg=231 ctermbg=2
 hi StatusLineNC     guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi StatusLineTerm   guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi StatusLineTermNC guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi TabLine          guisp=NONE guifg=#384542 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi TabLineFill      guisp=NONE guifg=#384542 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi TabLineSel       guisp=NONE guifg=#92fcb2 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+hi TabLine          guisp=NONE guifg=#384545 guibg=#202426 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE " Not active tab fg 
+hi TabLineFill      guisp=NONE guifg=#384542 guibg=#202426 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
+hi TabLineSel       guisp=NONE guifg=#889592 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE "92fcb2 
 hi Terminal         guisp=NONE guifg=#ffffff guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE " Text color in terminal "
 hi Title            guisp=NONE guifg=#ffd700 guibg=NONE ctermfg=220 ctermbg=234 gui=NONE cterm=NONE
 hi Visual           guisp=NONE guifg=NONE guibg=#2F3542 ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
