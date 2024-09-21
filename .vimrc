@@ -20,11 +20,11 @@ inoremap jk <Esc> " maps the string jj to function as the escape button"
 inoremap JK <Esc>
 nnoremap <A-Left> <C-O> 
 nnoremap <A-Right> <C-I>
-" dti<space> can be used to 'dw' (except for line endings) "
-nnoremap dw diw
-nnoremap cw ciw
+" it deletes every character between spaces "
+nnoremap dw diW 
+nnoremap cw ciW
 nnoremap S :%s///g<Left><Left><Left>
-nnoremap  <silent> <leader>n :nohlsearch<cr>
+nnoremap <silent> <leader>n :nohlsearch<cr>
 nnoremap <c-l> <c-w>l
 nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
