@@ -21,8 +21,8 @@ inoremap JK <Esc>
 nnoremap <A-Left> <C-O> 
 nnoremap <A-Right> <C-I>
 " it deletes every character between spaces "
-nnoremap dw diW 
-nnoremap cw ciW
+nnoremap dw diw 
+nnoremap cw ciw
 nnoremap S :%s///g<Left><Left><Left>
 nnoremap <silent> <leader>n :nohlsearch<cr>
 nnoremap <c-l> <c-w>l
