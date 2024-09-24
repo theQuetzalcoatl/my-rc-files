@@ -23,6 +23,9 @@ nnoremap <A-Right> <C-I>
 " it deletes every character between spaces "
 nnoremap dw diw 
 nnoremap cw ciw
+" de is delete and move to the end of the word --> not used
+nnoremap de d$
+nnoremap ce c$
 nnoremap S :%s///g<Left><Left><Left>
 nnoremap <silent> <leader>n :nohlsearch<cr>
 nnoremap <c-l> <c-w>l
@@ -53,7 +56,7 @@ nnoremap <silent> <A-Down> :m .+1<cr>==
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
-let g:netrw_liststyle = 3
+" let g:netrw_liststyle = 3
 
 
 " --- VISIBLES --- "
@@ -61,7 +64,7 @@ set number relativenumber
 set cursorline " highlights cursor line"
 colorscheme nordic-aurora " dark_plus plastic
    
-" set hlsearch " highlight search pattern"
+set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
 set noshowmatch
