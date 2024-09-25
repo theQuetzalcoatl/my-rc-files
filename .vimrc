@@ -62,7 +62,7 @@ nnoremap <silent> <A-Down> :m .+1<cr>==
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " highlights cursor line"
-colorscheme nordic-aurora " dark_plus plastic
+colorscheme  nordic-aurora " dark_plus plastic mochalatte
    
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
