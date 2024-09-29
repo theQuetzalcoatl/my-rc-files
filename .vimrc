@@ -53,6 +53,19 @@ vnoremap <silent> <A-Down> :m '>+1<cr>gv=gv
 vnoremap <silent> <A-Up> :m '<-2<cr>gv=gv
 nnoremap <silent> <A-Up> :m .-2<cr>==
 nnoremap <silent> <A-Down> :m .+1<cr>==
+" search matches at screen center
+nnoremap n nzz
+nnoremap N Nzz
+inoremap /* /*   */<Left><Left><Left><Left>
+inoremap { {<cr><cr>}<Up>
+inoremap ( ()<Left>
+inoremap " ""<Left>
+inoremap #deF #define<space>
+inoremap #inC #include <.h><Left><Left><Left>
+inoremap #Inc #include ".h"<Left><Left><Left>
+nnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
+nnoremap <silent> <leader>u :s/^\/\///<cr> " uncomment line
+
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
@@ -68,6 +81,7 @@ set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
 set noshowmatch
+" set matchtime <tenth of a second> Specifies how long the match stays highlighted
 
 " --- STATUS LINE --- "
 " help: statusline
@@ -116,20 +130,22 @@ function Mode_File()
 endfunction
 
 set statusline=%{%Mode_File()%}\ %m%r%=(%v,%l/%L)\ \ %p%%\ 
-" TODO: change cursorline BG color according to mode "
-
 
 " --- OTHER --- "
 set noerrorbells
 set nobackup
 set noswapfile
 
+set foldmethod=syntax " zc - fold, zo - open, zR - open all folds
+set foldlevelstart=99 " all fold open by default
+
 set autoindent
+" set cindent
+set smartindent
 set tabstop =2 " tabs in space"
 set shiftwidth=2 " V mode indents 2 spaces "
 set expandtab " use spaces for tabs "
-" jumps to the current search result when typing "
-set incsearch 
+set incsearch " jumps to the current search result when typing "
 set wildmode=list:full " list all matches for tabs "
 set clipboard=unnamedplus " makes it so that 'y' command copies to the default clipboard as well"
 set splitbelow " split all windows, including terminal below"
@@ -138,6 +154,4 @@ set grepprg=git\ grep\ -n "change grep command to this "
 
 set mouse=a
 set redrawtime=10000
-
-" iabbrev <something> "
 
