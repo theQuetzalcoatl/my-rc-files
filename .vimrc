@@ -16,8 +16,8 @@ let mapleader=" "
 " :help visual-index
 " remaps: :[n,i,v]map
 
-inoremap jk <Esc> " maps the string jj to function as the escape button"
-inoremap JK <Esc>
+inoremap hh <Esc> " maps the string jj to function as the escape button"
+inoremap HH <Esc>
 nnoremap <A-Left> <C-O> 
 nnoremap <A-Right> <C-I>
 " it deletes every character between spaces "
@@ -59,12 +59,19 @@ nnoremap N Nzz
 inoremap /* /*   */<Left><Left><Left><Left>
 inoremap { {<cr><cr>}<Up>
 inoremap ( ()<Left>
+inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap #deF #define<space>
 inoremap #inC #include <.h><Left><Left><Left>
 inoremap #Inc #include ".h"<Left><Left><Left>
 nnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
 nnoremap <silent> <leader>u :s/^\/\///<cr> " uncomment line
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+" primitive building keybind
+nnoremap <leader>b :!clear; ./build.sh<cr>
 
 
 " --- NETRW --- "
