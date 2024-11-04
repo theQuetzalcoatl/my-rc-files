@@ -22,6 +22,7 @@ nnoremap <A-Left> <C-O>
 nnoremap <A-Right> <C-I>
 " it deletes every character between spaces "
 nnoremap dw diw 
+nnoremap yw yiw 
 nnoremap cw ciw
 " de is delete and move to the end of the word --> not used
 nnoremap de d$
@@ -72,7 +73,8 @@ vnoremap <Tab> >
 vnoremap <S-Tab> <
 " primitive building keybind
 nnoremap <leader>b :!clear; ./build.sh<cr>
-
+nnoremap <silent> <c-Down> :cnext<cr>
+nnoremap <silent> <c-Up> :cprev<cr>
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
