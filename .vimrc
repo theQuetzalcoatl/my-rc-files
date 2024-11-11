@@ -75,10 +75,14 @@ vnoremap <S-Tab> <
 nnoremap <leader>b :!clear; ./build.sh<cr>
 nnoremap <silent> <c-Down> :cnext<cr>
 nnoremap <silent> <c-Up> :cprev<cr>
+" nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
 " let g:netrw_liststyle = 3
+" remaps 'l' to 'Enter' and 'h' to '-' when using netrw "
+autocmd FileType netrw map <buffer> l <CR>
+autocmd FileType netrw map <buffer> h -
 
 
 " --- VISIBLES --- "
