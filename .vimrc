@@ -1,4 +1,4 @@
-" iew options by :options"
+" view options by :options"
 " Docs on particular option :help <option name>"
 " :help key-notation "
 
@@ -16,10 +16,10 @@ let mapleader=" "
 " :help visual-index
 " remaps: :[n,i,v]map
 
-inoremap hh <Esc> " maps the string jj to function as the escape button"
+inoremap hh <Esc> " maps the string hh to function as the escape button"
 inoremap HH <Esc>
-nnoremap <A-Left> <C-O> 
-nnoremap <A-Right> <C-I>
+nnoremap <Esc>h <C-O> 
+nnoremap <Esc>l <C-I>
 " it deletes every character between spaces "
 nnoremap dw diw 
 nnoremap yw yiw 
@@ -34,26 +34,26 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <silent> <Esc>a :tabp<cr> 
-inoremap <silent> <Esc>a <Esc>:tabp<cr>i
 nnoremap <silent> <Esc>d :tabn<cr>
+inoremap <silent> <Esc>a <Esc>:tabp<cr>i
 inoremap <silent> <Esc>d <Esc>:tabn<cr>i
 " It's a remap which i dont use
 nnoremap , :
-" window resizeing i'silent' supresses command line output "
-nnoremap <silent> <Space><Up>    :resize -4<cr>
-nnoremap <silent> <Space><Down>  :resize +4<cr>
-nnoremap <silent> <Space><Left>  :vertical resize -4<cr>
-nnoremap <silent> <Space><Right> :vertical resize +4<cr>
+" window resizeing 'silent' supresses command line output "
+nnoremap <silent> <leader>k  :resize -4<cr>
+nnoremap <silent> <leader>j  :resize +4<cr>
+nnoremap <silent> <leader>h  :vertical resize -4<cr>
+nnoremap <silent> <leader><Right> :vertical resize +4<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>v :Vexplore<cr>
 nnoremap <silent> <leader>t :Texplore<cr>
 nnoremap <silent> <leader>l :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
-" move highlighted blocks of code up and down + indent accordingly 
-vnoremap <silent> <A-Down> :m '>+1<cr>gv=gv
-vnoremap <silent> <A-Up> :m '<-2<cr>gv=gv
-nnoremap <silent> <A-Up> :m .-2<cr>==
-nnoremap <silent> <A-Down> :m .+1<cr>==
+" move highlighted blocks of code up and down + indent accordingly , NOTE: <A-j> does not work because the OS does not recognize it or smth. 
+vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv
+vnoremap <silent> <Esc>k :m '<-2<cr>gv=gv
+nnoremap <silent> <Esc>k :m .-2<cr>==
+nnoremap <silent> <Esc>j :m .+1<cr>==
 " search matches at screen center
 nnoremap n nzz
 nnoremap N Nzz
@@ -71,10 +71,10 @@ nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >
 vnoremap <S-Tab> <
-" primitive building keybind
 nnoremap <leader>b :!clear; ./build.sh<cr>
-nnoremap <silent> <c-Down> :cnext<cr>
-nnoremap <silent> <c-Up> :cprev<cr>
+nnoremap <silent> <c-u> :cnext<cr>
+" Ctrl+i was apperantly for indentation "
+nnoremap <silent> <c-i> :cprev<cr>
 " nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
@@ -94,7 +94,6 @@ set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
 set noshowmatch
-" set matchtime <tenth of a second> Specifies how long the match stays highlighted
 
 " --- STATUS LINE --- "
 " help: statusline
