@@ -72,9 +72,8 @@ nnoremap <S-Tab> <<
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 nnoremap <leader>b :!clear; ./build.sh<cr>
-nnoremap <silent> <c-u> :cnext<cr>
-" Ctrl+i was apperantly for indentation "
-nnoremap <silent> <c-i> :cprev<cr>
+nnoremap <silent> <A-Down> :cnext<cr>
+nnoremap <silent> <A-Up> :cprev<cr>
 " nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
