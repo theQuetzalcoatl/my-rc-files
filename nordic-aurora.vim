@@ -35,7 +35,7 @@ set t_Co=256
 "Function
 "Keyword
 "Operator
-
+"
 " misc
 hi ColorColumn      guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi Conceal          guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -43,7 +43,7 @@ hi Cursor           guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 
 hi lCursor          guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi CursorIM         guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi CursorColumn     guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi CursorLine       guisp=NONE guifg=NONE   guibg=#1a1f2a ctermfg=231 ctermbg=234 gui=bold cterm=bold
+hi CursorLine       guisp=NONE guifg=NONE   guibg=#1a1f2a ctermfg=231 ctermbg=234 gui=NONE cterm=NONE  " gui=bold cterm=bold
 hi Directory        guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi DiffAdd          guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi DiffChange       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -55,7 +55,7 @@ hi VertSplit        guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 
 hi Folded           guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi FoldColumn       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi SignColumn       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi IncSearch        guisp=NONE guifg=#101416 guibg=#0445f7 ctermfg=231 ctermbg=234 gui=bold cterm=bold
+hi IncSearch        guisp=NONE guifg=#101416 guibg=#64B5F6 ctermfg=231 ctermbg=234 gui=bold cterm=bold
 hi LineNr           guisp=NONE guifg=#373F4D guibg=NONE ctermfg=239 ctermbg=235 gui=bold cterm=bold
 hi LineNrAbove      guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi LineNrBelow      guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
@@ -70,7 +70,7 @@ hi PmenuSbar        guisp=NONE guifg=#ccd3e8 guibg=#ccd3e8 ctermfg=231 ctermbg=2
 hi PmenuThumb       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi Question         guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi QuickFixLine     guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
-hi Search           guisp=NONE guifg=#101416 guibg=#0445f7 ctermfg=231 ctermbg=234 gui=bold cterm=bold
+hi Search           guisp=NONE guifg=#101416 guibg=#64b5f6 ctermfg=231 ctermbg=234 gui=bold cterm=bold
 hi SpecialKey       guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi SpellBad         guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
 hi SpellCap         guisp=NONE guifg=#384545 guibg=NONE ctermfg=231 ctermbg=234 gui=NONE cterm=NONE
