@@ -74,6 +74,7 @@ vnoremap <S-Tab> <
 nnoremap <leader>b :!clear; ./build.sh<cr>
 nnoremap <silent> <A-Down> :cnext<cr>
 nnoremap <silent> <A-Up> :cprev<cr>
+nnoremap é $
 " nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
