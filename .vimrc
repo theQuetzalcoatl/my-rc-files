@@ -75,6 +75,7 @@ nnoremap <leader>b :!clear; ./build.sh<cr>
 nnoremap <silent> <A-Down> :cnext<cr>
 nnoremap <silent> <A-Up> :cprev<cr>
 nnoremap é $
+vnoremap é $
 " nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
@@ -166,4 +167,3 @@ set grepprg=git\ grep\ -n "change grep command to this "
 
 set mouse=a
 set redrawtime=10000
-
