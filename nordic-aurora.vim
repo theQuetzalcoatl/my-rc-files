@@ -105,7 +105,7 @@ hi Special    guisp=NONE guifg=#b48ead guibg=NONE ctermfg=174 ctermbg=234  gui=N
 hi Underlined guisp=NONE guifg=#348B4A guibg=NONE ctermfg=84  ctermbg=234  gui=NONE   cterm=NONE
 hi Ignore     guisp=NONE guifg=#d8dee9 guibg=NONE ctermfg=231 ctermbg=234  gui=NONE   cterm=NONE
 hi Error      guisp=NONE guifg=#b48ead guibg=NONE ctermfg=131 ctermbg=234  gui=NONE   cterm=NONE
-hi Todo       guisp=NONE guifg=#b48ead guibg=NONE ctermfg=168 ctermbg=234  gui=NONE   cterm=bold
+hi Todo       guisp=NONE guifg=#8fbcbb guibg=NONE ctermfg=168 ctermbg=234  gui=NONE   cterm=bold
 
 " minor
 

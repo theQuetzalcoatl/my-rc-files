@@ -76,6 +76,8 @@ nnoremap <silent> <A-Down> :cnext<cr>
 nnoremap <silent> <A-Up> :cprev<cr>
 nnoremap é $
 vnoremap é $
+" alternative saving "
+nnoremap <leader>w :update<cr>
 " nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
