@@ -29,10 +29,6 @@ nnoremap de d$
 nnoremap ce c$
 nnoremap S :%s///g<Left><Left><Left>
 nnoremap <silent> <leader>n :nohlsearch<cr>
-nnoremap <c-l> <c-w>l
-nnoremap <c-k> <c-w>k
-nnoremap <c-j> <c-w>j
-nnoremap <c-h> <c-w>h
 nnoremap <silent> <Esc>a :tabp<cr> 
 nnoremap <silent> <Esc>d :tabn<cr>
 inoremap <silent> <Esc>a <Esc>:tabp<cr>i
@@ -40,14 +36,14 @@ inoremap <silent> <Esc>d <Esc>:tabn<cr>i
 " It's a remap which i dont use
 nnoremap , :
 " window resizeing 'silent' supresses command line output "
-nnoremap <silent> <leader>k  :resize -4<cr>
-nnoremap <silent> <leader>j  :resize +4<cr>
-nnoremap <silent> <leader>h  :vertical resize -4<cr>
-nnoremap <silent> <leader><Right> :vertical resize +4<cr>
+nnoremap <silent> <leader>k :resize -4<cr>
+nnoremap <silent> <leader>j :resize +4<cr>
+nnoremap <silent> <leader>h :vertical resize -4<cr>
+nnoremap <silent> <leader>l :vertical resize +4<cr>
 nnoremap <silent> <leader>e :Explore<cr>
 nnoremap <silent> <leader>v :Vexplore<cr>
 nnoremap <silent> <leader>t :Texplore<cr>
-nnoremap <silent> <leader>l :Lexplore<cr> :vertical resize 30<cr>
+nnoremap <silent> <leader>L :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
 " move highlighted blocks of code up and down + indent accordingly , NOTE: <A-j> does not work because the OS does not recognize it or smth. 
 vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv
@@ -67,6 +63,8 @@ inoremap #inC #include <.h><Left><Left><Left>
 inoremap #Inc #include ".h"<Left><Left><Left>
 nnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
 nnoremap <silent> <leader>u :s/^\/\///<cr> " uncomment line
+vnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
+vnoremap <silent> <leader>u :s/^\/\///<cr> " uncomment line
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >
@@ -78,20 +76,20 @@ nnoremap é $
 vnoremap é $
 " alternative saving "
 nnoremap <leader>w :update<cr>
-" nnoremap <silent> <c-f> yw :grep <c-r>""" :copen<cr>
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
 " let g:netrw_liststyle = 3
 " remaps 'l' to 'Enter' and 'h' to '-' when using netrw "
-autocmd FileType netrw map <buffer> l <CR>
+autocmd FileType netrw map <buffer> l <cr>
 autocmd FileType netrw map <buffer> h -
 
 
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " highlights cursor line"
-colorscheme  nordic-aurora " dark_plus plastic mochalatte
+" colorscheme  nordic-aurora " dark_plus plastic mochalatte
+colorscheme  dark_plus  
    
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
