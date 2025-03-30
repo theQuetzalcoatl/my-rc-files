@@ -53,7 +53,7 @@ nnoremap <silent> <Esc>j :m .+1<cr>==
 " search matches at screen center
 nnoremap n nzz
 nnoremap N Nzz
-inoremap /* /*   */<Left><Left><Left><Left>
+inoremap /* /*  */<Left><Left><Left>
 inoremap { {<cr><cr>}<Up>
 inoremap ( ()<Left>
 inoremap [ []<Left>
@@ -76,6 +76,11 @@ nnoremap é $
 vnoremap é $
 " alternative saving "
 nnoremap <leader>w :update<cr>
+
+" --- CTAGS --- "
+" ctags -R
+" Ctr + ] to go to definition
+" Ctrl + t to go to previously visited definitions
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
