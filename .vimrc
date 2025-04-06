@@ -77,6 +77,9 @@ vnoremap é $
 " alternative saving "
 nnoremap <leader>w :update<cr>
 
+command! Hexmode :%!xxd
+command! Binarymode :%!xxd -r
+
 " --- CTAGS --- "
 " ctags -R
 " Ctr + ] to go to definition
