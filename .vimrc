@@ -95,9 +95,12 @@ autocmd FileType netrw map <buffer> h -
 
 " --- VISIBLES --- "
 set number relativenumber
-set cursorline " highlights cursor line"
-" colorscheme  nordic-aurora " dark_plus plastic mochalatte
-colorscheme  dark_plus  
+set cursorline " enables 'highlight CursorLine -- cterm=NONE removes the underscoring"
+colorscheme  mustang
+" colorscheme  alduin
+" colorscheme  iceberg
+" colorscheme  nordic-aurora 
+" colorscheme  dark_plus  
    
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
