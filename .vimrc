@@ -24,6 +24,7 @@ nnoremap <Esc>l <C-I>
 nnoremap dw diw 
 nnoremap yw yiw 
 nnoremap cw ciw
+nnoremap vw viw
 " de is delete and move to the end of the word --> not used
 nnoremap de d$
 nnoremap ce c$
