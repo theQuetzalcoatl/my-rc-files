@@ -54,7 +54,8 @@ nnoremap <silent> <Esc>j :m .+1<cr>==
 nnoremap n nzz
 nnoremap N Nzz
 inoremap /* /*  */<Left><Left><Left>
-inoremap { {<cr><cr>}<Up>
+inoremap {<space> {<cr><cr>}<Up>
+inoremap { {}<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
@@ -78,6 +79,7 @@ vnoremap é $
 nnoremap <leader>w :update<cr>
 
 command! Hexmode :%!xxd
+" DO NOT FORGET TO USE THIS COMMAND BEFORE SAVING THE HEX CONTENT "
 command! Binarymode :%!xxd -r
 
 " --- CTAGS --- "
@@ -166,13 +168,18 @@ set foldlevelstart=99 " all fold open by default
 set autoindent
 " set cindent
 set smartindent
-set tabstop =2 " tabs in space"
+set tabstop =2 " tabs in space "
 set shiftwidth=2 " V mode indents 2 spaces "
 set expandtab " use spaces for tabs "
 set incsearch " jumps to the current search result when typing "
 set wildmode=list:full " list all matches for tabs "
 set clipboard=unnamedplus " makes it so that 'y' command copies to the default clipboard as well"
 set splitbelow " split all windows, including terminal below"
+
+set list
+set listchars=tab:»·,trail:·
+" hide tabs, spaces "
+set list!
 
 set grepprg=git\ grep\ -n "change grep command to this "
 
