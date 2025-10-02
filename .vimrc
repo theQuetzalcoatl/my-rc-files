@@ -16,6 +16,9 @@ let mapleader=" "
 " :help visual-index
 " remaps: :[n,i,v]map
 
+
+" make spaced word into snake case "
+nnoremap <leader>r elr_
 inoremap hh <Esc> " maps the string hh to function as the escape button"
 inoremap HH <Esc>
 nnoremap <Esc>h <C-O> 
