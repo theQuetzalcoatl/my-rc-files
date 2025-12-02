@@ -5,8 +5,8 @@
 set nocompatible
 syntax on
 set path+=**
-
 nnoremap <SPACE> <Nop>
+
 let mapleader=" "
 
 " --- REMAPS --- "
@@ -18,7 +18,7 @@ let mapleader=" "
 
 
 " make spaced word into snake case "
-nnoremap <leader>r elr_
+" nnoremap <leader>r Bhr_
 inoremap hh <Esc> " maps the string hh to function as the escape button"
 inoremap HH <Esc>
 nnoremap <Esc>h <C-O> 
@@ -50,22 +50,23 @@ nnoremap <silent> <leader>t :Texplore<cr>
 nnoremap <silent> <leader>L :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
 " move highlighted blocks of code up and down + indent accordingly , NOTE: <A-j> does not work because the OS does not recognize it or smth. 
-vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv
-vnoremap <silent> <Esc>k :m '<-2<cr>gv=gv
+vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv 
+vnoremap <silent> <Esc>k :m '<-2<cr>gv=gv 
 nnoremap <silent> <Esc>k :m .-2<cr>==
 nnoremap <silent> <Esc>j :m .+1<cr>==
 " search matches at screen center
 nnoremap n nzz
 nnoremap N Nzz
 inoremap /* /*  */<Left><Left><Left>
-inoremap {<space> {<cr><cr>}<Up>
+inoremap {<cr> {<cr><cr>}<Up>
 inoremap { {}<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
-inoremap #deF #define<space>
+inoremap #def #define<space>
 inoremap #inC #include <.h><Left><Left><Left>
 inoremap #Inc #include ".h"<Left><Left><Left>
+nnoremap <silent> <leader>r A<space>/* NOTE: refactor */<Esc>
 nnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
 nnoremap <silent> <leader>u :s/^\/\///<cr> " uncomment line
 vnoremap <silent> <leader>c :s/^/\/\//<cr> :nohlsearch<cr> " comment line
@@ -81,6 +82,8 @@ nnoremap é $
 vnoremap é $
 " alternative saving "
 nnoremap <leader>w :update<cr>
+" folding in visual mode "
+xnoremap <C-h> zf
 
 command! Hexmode :%!xxd
 " DO NOT FORGET TO USE THIS COMMAND BEFORE SAVING THE HEX CONTENT "
@@ -101,12 +104,13 @@ autocmd FileType netrw map <buffer> h -
 
 " --- VISIBLES --- "
 set number relativenumber
-set cursorline " enables 'highlight CursorLine -- cterm=NONE removes the underscoring"
-colorscheme  mustang
+set cursorline " enables 'highlight CursorLine -- cterm=NONE removes the underscoring "
+" colorscheme  mustang
 " colorscheme  alduin
 " colorscheme  iceberg
 " colorscheme  nordic-aurora 
 " colorscheme  dark_plus  
+  colorscheme  nord  
    
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
@@ -122,7 +126,7 @@ if has("termguicolors")
 endif
 
 highlight StatusLineModeNormal   guibg=#ffa800 guifg=#151B1E cterm=bold
-highlight StatusLineModeInsert   guibg=#2e87d1 guifg=#151B1E cterm=bold
+highlight StatusLineModeInsert   guibg=#0760a9 guifg=#151B1E cterm=bold
 highlight StatusLineModeReplace  guibg=#dff708 guifg=#151B1E cterm=bold
 highlight StatusLineModeVisual   guibg=#2a7a53 guifg=#151B1E cterm=bold
 highlight StatusLineModeCommand  guibg=#6c01ff guifg=#151B1E cterm=bold
@@ -130,12 +134,13 @@ highlight StatusLineModeTerminal guibg=#bb002d guifg=#151B1E cterm=bold
 highlight StatusLineModeUnknown  guibg=#000000 guifg=#151B1E cterm=bold
 
 highlight StatusLineFileNormal   guibg=#000000 guifg=#ffa800 cterm=bold
-highlight StatusLineFileInsert   guibg=#000000 guifg=#2e87d1 cterm=bold
+highlight StatusLineFileInsert   guibg=#000000 guifg=#0760a9 cterm=bold
 highlight StatusLineFileReplace  guibg=#000000 guifg=#dff708 cterm=bold
 highlight StatusLineFileVisual   guibg=#000000 guifg=#2a7a53 cterm=bold
 highlight StatusLineFileCommand  guibg=#000000 guifg=#6c01ff cterm=bold
 highlight StatusLineFileTerminal guibg=#000000 guifg=#bb002d cterm=bold
 highlight StatusLineFileUnknown  guibg=#000000  cterm=bold
+
 
 function Mode_File()
 	let l:mode = mode()
@@ -166,7 +171,6 @@ set noerrorbells
 set nobackup
 set noswapfile
 
-set foldmethod=syntax " zc - fold, zo - open, zR - open all folds
 set foldlevelstart=99 " all fold open by default
 
 set autoindent
