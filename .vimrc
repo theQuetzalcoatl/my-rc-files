@@ -80,8 +80,9 @@ nnoremap <silent> <A-Down> :cnext<cr>
 nnoremap <silent> <A-Up> :cprev<cr>
 nnoremap é $
 vnoremap é $
-" alternative saving "
-nnoremap <leader>w :update<cr>
+" Vim uses real regex "
+" +,?,() -- are now regexes"
+nnoremap / /\v
 " folding in visual mode "
 xnoremap <C-h> zf
 
@@ -105,11 +106,6 @@ autocmd FileType netrw map <buffer> h -
 " --- VISIBLES --- "
 set number relativenumber
 set cursorline " enables 'highlight CursorLine -- cterm=NONE removes the underscoring "
-" colorscheme  mustang
-" colorscheme  alduin
-" colorscheme  iceberg
-" colorscheme  nordic-aurora 
-" colorscheme  dark_plus  
   colorscheme  nord  
    
 set hlsearch " highlight search pattern"
