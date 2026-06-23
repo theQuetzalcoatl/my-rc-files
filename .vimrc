@@ -24,14 +24,15 @@ inoremap HH <Esc>
 nnoremap <Esc>h <C-O> 
 nnoremap <Esc>l <C-I>
 " it deletes every character between spaces "
-nnoremap dw diw 
-nnoremap yw yiw 
-nnoremap cw ciw
-nnoremap vw viw
+" "noremap dw diw 
+" "nnoremap yw yiw 
+" "nnoremap cw ciw
+" "nnoremap vw viw
 " de is delete and move to the end of the word --> not used
 nnoremap de d$
 nnoremap ce c$
 nnoremap S :%s///g<Left><Left><Left>
+vnoremap S :s///g<Left><Left><Left>
 nnoremap <silent> <leader>n :nohlsearch<cr>
 nnoremap <silent> <Esc>a :tabp<cr> 
 nnoremap <silent> <Esc>d :tabn<cr>
@@ -172,8 +173,8 @@ set foldlevelstart=99 " all fold open by default
 set autoindent
 " set cindent
 set smartindent
-set tabstop =2 " tabs in space "
-set shiftwidth=2 " V mode indents 2 spaces "
+set tabstop =4 " tabs in space "
+set shiftwidth=4 " V mode indents 2 spaces "
 set expandtab " use spaces for tabs "
 set incsearch " jumps to the current search result when typing "
 set wildmode=list:full " list all matches for tabs "
