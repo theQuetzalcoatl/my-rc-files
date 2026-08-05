@@ -4,6 +4,10 @@
 
 set nocompatible
 syntax on
+" filetype - everything else builds on this
+" plugin - loads *filetype plugins* (`$VIMRUNTIME/ftplugin/c.vim`). These are little scripts Vim ships that set sensible per-language defaults. For C, that ftplugin sets things like comment strings, `formatoptions`, and `matchit` support automatically.
+" indent - loads *indent scripts* (`$VIMRUNTIME/indent/c.vim`), which know how to indent that specific language correctly.
+filetype plugin indent on
 set path+=**
 nnoremap <SPACE> <Nop>
 
@@ -19,22 +23,23 @@ let mapleader=" "
 
 " make spaced word into snake case "
 " nnoremap <leader>r Bhr_
-inoremap hh <Esc> " maps the string hh to function as the escape button"
+" maps the string hh to function as the escape button"
+inoremap hh <Esc>
 inoremap HH <Esc>
-nnoremap <Esc>h <C-O> 
+nnoremap <Esc>h <C-O>
 nnoremap <Esc>l <C-I>
 " it deletes every character between spaces "
 " "noremap dw diw 
-" "nnoremap yw yiw 
-" "nnoremap cw ciw
-" "nnoremap vw viw
+nnoremap yw yiw
+nnoremap cw ciw
+nnoremap vw viw
 " de is delete and move to the end of the word --> not used
 nnoremap de d$
 nnoremap ce c$
 nnoremap S :%s///g<Left><Left><Left>
 vnoremap S :s///g<Left><Left><Left>
 nnoremap <silent> <leader>n :nohlsearch<cr>
-nnoremap <silent> <Esc>a :tabp<cr> 
+nnoremap <silent> <Esc>a :tabp<cr>
 nnoremap <silent> <Esc>d :tabn<cr>
 inoremap <silent> <Esc>a <Esc>:tabp<cr>i
 inoremap <silent> <Esc>d <Esc>:tabn<cr>i
@@ -51,7 +56,7 @@ nnoremap <silent> <leader>t :Texplore<cr>
 nnoremap <silent> <leader>L :Lexplore<cr> :vertical resize 30<cr>
 nnoremap <leader>f :find<Space>
 " move highlighted blocks of code up and down + indent accordingly , NOTE: <A-j> does not work because the OS does not recognize it or smth. 
-vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv 
+vnoremap <silent> <Esc>j :m '>+1<cr>gv=gv
 vnoremap <silent> <Esc>k :m '<-2<cr>gv=gv 
 nnoremap <silent> <Esc>k :m .-2<cr>==
 nnoremap <silent> <Esc>j :m .+1<cr>==
@@ -76,25 +81,30 @@ nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 vnoremap <Tab> >
 vnoremap <S-Tab> <
-nnoremap <leader>b :!clear; ./build.sh<cr>
+" make compiler errors searchable by dropping them into the quickfix list "
+set makeprg=./build.sh
+nnoremap <leader>b :make<cr>
 nnoremap <silent> <A-Down> :cnext<cr>
 nnoremap <silent> <A-Up> :cprev<cr>
 nnoremap é $
 vnoremap é $
+" if im in main.c it issues: :find main. --> so i can just type 'h' and go to the header "
+nnoremap <leader>h :find %:t:r.h<cr>
 " Vim uses real regex "
 " +,?,() -- are now regexes"
 nnoremap / /\v
 " folding in visual mode "
 xnoremap <C-h> zf
 
+" using K, it shows the manpage in a different, buffer window rather than switching to a new one
+runtime ftplugin/man.vim
+autocmd FileType c,cpp setlocal keywordprg=:Man
+" Auto regenerate ctags on saving the buffer
+autocmd BufWritePost *.c,*.h silent! !ctags -R . &
+
 command! Hexmode :%!xxd
 " DO NOT FORGET TO USE THIS COMMAND BEFORE SAVING THE HEX CONTENT "
 command! Binarymode :%!xxd -r
-
-" --- CTAGS --- "
-" ctags -R
-" Ctr + ] to go to definition
-" Ctrl + t to go to previously visited definitions
 
 " --- NETRW --- "
 " Set Netrw to open in tree view by default
@@ -105,10 +115,27 @@ autocmd FileType netrw map <buffer> h -
 
 
 " --- VISIBLES --- "
+
+" <C-x><C-o> = omni completion, SETS  <C-x><C-]> = tag completion
+set omnifunc=syntaxcomplete#Complete
 set number relativenumber
 set cursorline " enables 'highlight CursorLine -- cterm=NONE removes the underscoring "
-  colorscheme  nord  
+" if nord is missing the error is swallowed "
+silent! colorscheme  nord  
    
+
+" is Vim's dedicated C indentation engine
+" - `:0 — case labels in a switch get 0 extra indent relative to the switch (aligned under it, not indented further).
+" - l1 — code after a case label aligns with the label.
+" - t0 — a function's return type on its own line gets 0 indent.
+" - (0 — when you break inside unclosed parentheses, line up with the character after the `(` instead of adding a big indent.
+" - `W4` — but if the `(` is the last thing on the line, indent continuation by 4 instead.
+" applies the setting only to the current buffer, and the `FileType` autocommand fires it only for C/C++ files.
+augroup c_indent
+  autocmd!
+  autocmd FileType c,cpp setlocal cindent cinoptions=:0,l1,t0,(0,W4
+augroup END
+
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
@@ -151,7 +178,7 @@ function Mode_File()
 		return '%#StatusLineModeVisual# VISUAL %#StatusLineFileVisual# %t'
 	elseif l:mode == 'V'
 		return '%#StatusLineModeVisual# V-LINE %#StatusLineFileVisual# %t'
-	elseif l:mode == '^V'
+	elseif l:mode == "\<C-v>"
 		return '%#StatusLineModeVisual# V-BLOCK %#StatusLineFileVisual# %t'
 	elseif l:mode == 'c'
 		return '%#StatusLineModeCommand# COMMAND %#StatusLineFileCommand# %t'
@@ -159,6 +186,7 @@ function Mode_File()
 		return '%#StatusLineModeTerminal# TERMINAL %#StatusLineFileTerminal# %t'
 	else
 		return '%#StatusLineModeUnknown# UNKNOWN %#StatusLine#' " %#StatusLine#' restores the original colors
+    endif
 endfunction
 
 set statusline=%{%Mode_File()%}\ %m%r%=(%v,%l/%L)\ \ %p%%\ 
@@ -171,10 +199,8 @@ set noswapfile
 set foldlevelstart=99 " all fold open by default
 
 set autoindent
-" set cindent
-set smartindent
-set tabstop =4 " tabs in space "
-set shiftwidth=4 " V mode indents 2 spaces "
+set tabstop=4 " tabs in space "
+set shiftwidth=4 " V mode indents X spaces "
 set expandtab " use spaces for tabs "
 set incsearch " jumps to the current search result when typing "
 set wildmode=list:full " list all matches for tabs "
