@@ -136,6 +136,9 @@ augroup c_indent
   autocmd FileType c,cpp setlocal cindent cinoptions=:0,l1,t0,(0,W4
 augroup END
 
+" status line is not overwritten on -S session entry
+set sessionoptions-=localoptions
+
 set hlsearch " highlight search pattern"
 " set nohlsearch " remove highlighting search matches"
 " does not jump to matching bracket for a sec "
